@@ -5,6 +5,9 @@ namespace MoneyCalculator.Test
 {
     public class MoneyTest
     {
+
+        IMoney money; 
+
         [Fact]
         public void NegativeAmountTest()
         {
