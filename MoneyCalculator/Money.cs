@@ -30,6 +30,8 @@ namespace MoneyCalculator
 
         private string ValidateCurrency(string currencyCode)
         {
+            if (string.IsNullOrEmpty(currencyCode))
+                throw new ArgumentNullException("currencyCode");
             if (!CurrencyCodes.Any(c => c.Equals(currencyCode)))
                 throw new ArgumentException("Currency Code invalid", nameof(currencyCode));
             return currencyCode;

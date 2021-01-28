@@ -5,29 +5,30 @@ namespace MoneyCalculator.Test
 {
     public class MoneyTest
     {
-
-        IMoney money; 
-
         [Fact]
         public void NegativeAmountTest()
         {
-            IMoney money;
-            Assert.Throws<ArgumentException>(()=> money = new Money(-5.34M, "GBP"));            
+            Assert.Throws<ArgumentException>(()=>  new Money(-5.34M, "GBP"));            
         }
 
         [Fact]
         public void InvalidCurrencyTest()
-        {
-            IMoney money;
-            Assert.Throws<ArgumentException>(() => money = new Money(5.34M, "testB"));
+        {   
+            Assert.Throws<ArgumentException>(() => new Money(5.34M, "testB"));
         }
 
         [Fact]
         public void EmptyCurrecyCode()
-        {
-            IMoney money;
-            Assert.Throws<ArgumentException>(() => money = new Money(5.34M, string.Empty));
+        {  
+            Assert.Throws<ArgumentNullException>(() =>  new Money(5.34M, string.Empty));
         }
+
+        [Fact]
+        public void NullCurrecyCode()
+        {
+            Assert.Throws<ArgumentNullException>(() =>new Money(5.34M, null));
+        }
+
 
     }
 }
