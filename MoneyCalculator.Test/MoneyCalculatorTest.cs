@@ -58,6 +58,14 @@ namespace MoneyCalculator.Test
 
         }
 
+        [Fact]
+        public void SumPerCurrencyEmptyListTest()
+        {
+            IMoneyCalculator moneyCalculator = new MoneyCalculator();
+            Assert.Throws<ArgumentNullException>(() => moneyCalculator.SumPerCurrency(new List<IMoney>()));
+
+        }
+
 
 
 
