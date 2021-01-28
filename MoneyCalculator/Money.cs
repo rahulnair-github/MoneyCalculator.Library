@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MoneyCalculator
 {
@@ -21,7 +19,10 @@ namespace MoneyCalculator
         private static IEnumerable<string> GetValidCurrencyCodes()
         {
             if (CurrencyCodes != null)
+            {
                 return CurrencyCodes;
+            }
+
             return CultureInfo.GetCultures(CultureTypes.SpecificCultures)
                 .Select(reg => new RegionInfo(reg.LCID))
                 .Select(cur => cur.ISOCurrencySymbol);
@@ -31,16 +32,25 @@ namespace MoneyCalculator
         private string ValidateCurrency(string currencyCode)
         {
             if (string.IsNullOrEmpty(currencyCode))
+            {
                 throw new ArgumentNullException("currencyCode");
+            }
+
             if (!CurrencyCodes.Any(c => c.Equals(currencyCode)))
+            {
                 throw new ArgumentException("Currency Code invalid", nameof(currencyCode));
+            }
+
             return currencyCode;
         }
 
         private decimal ValidateAmount(decimal amount)
         {
             if (amount < 0)
+            {
                 throw new ArgumentException("Currency Amount cannot be negative", nameof(amount));
+            }
+
             return amount;
         }
 

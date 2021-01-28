@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MoneyCalculator
 {
@@ -11,12 +9,16 @@ namespace MoneyCalculator
         public IMoney Max(IEnumerable<IMoney> monies)
         {
             if (monies == null || !monies.Any())
+            {
                 throw new ArgumentNullException();
+            }
 
             var currencies = monies.Select(m => m.Currency).Distinct();
 
             if (currencies.Count() > 1)
+            {
                 throw new ArgumentException("Multiple Currencies not allowed for this method");
+            }
 
             var amount = monies.Max(m => m.Amount);
             return new Money(amount,currencies.First());
@@ -25,7 +27,9 @@ namespace MoneyCalculator
         public IEnumerable<IMoney> SumPerCurrency(IEnumerable<IMoney> monies)
         {
             if (monies == null || !monies.Any())
+            {
                 throw new ArgumentNullException();
+            }
 
             List<IMoney> sumPerCurrencyList= new List<IMoney>();
             var currencyGroups = monies.GroupBy(x => x.Currency);

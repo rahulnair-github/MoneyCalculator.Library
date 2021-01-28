@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MoneyCalculator
+﻿namespace MoneyCalculator
 {
     /// <summary>
     /// An amount of money in a particular currency.

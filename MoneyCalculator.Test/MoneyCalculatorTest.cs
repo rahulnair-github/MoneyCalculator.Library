@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace MoneyCalculator.Test
@@ -73,15 +71,23 @@ namespace MoneyCalculator.Test
 
         private bool CheckMoneyListEquality(IEnumerable<IMoney> actual, IEnumerable<IMoney> expected)
         {
-            if (actual.Count() != expected.Count()) return false;
+            if (actual.Count() != expected.Count())
+            {
+                return false;
+            }
 
             foreach (var item in actual)
             {
                 var expectedItem = expected.FirstOrDefault(i => i.Currency == item.Currency);
-                if (expectedItem == null) return false;
+                if (expectedItem == null)
+                {
+                    return false;
+                }
 
-                if (expectedItem.Amount != item.Amount) return false;
-
+                if (expectedItem.Amount != item.Amount)
+                {
+                    return false;
+                }
             }
             return true;
         }

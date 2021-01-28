@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>This library performs following operations on provided list of  monies
+1. Money instance with maximum amount provided in the list
+2. Get a list of Money instance with sum of each currency type</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <Authors>Rahul Nair</Authors>
+    <RepositoryUrl>https://github.com/rahulnair-github/MoneyCalculator.Library</RepositoryUrl>
+    <RepositoryType>Private</RepositoryType>
   </PropertyGroup>
 
 </Project>
