@@ -18,6 +18,13 @@ namespace MoneyCalculator.Test
         }
 
         [Fact]
+        public void LowerCaseCurrencyTest()
+        {
+            IMoney money = new Money(5.34M, "gbp");
+            Assert.NotNull(money);
+        }
+
+        [Fact]
         public void EmptyCurrecyCode()
         {  
             Assert.Throws<ArgumentNullException>(() =>  new Money(5.34M, string.Empty));

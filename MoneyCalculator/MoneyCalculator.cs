@@ -10,14 +10,14 @@ namespace MoneyCalculator
         {
             if (monies == null || !monies.Any())
             {
-                throw new ArgumentNullException();
+                throw new ArgumentNullException("IEnumerable<IMoney>","Input money list either null or empty");
             }
 
             var currencies = monies.Select(m => m.Currency).Distinct();
 
             if (currencies.Count() > 1)
             {
-                throw new ArgumentException("Multiple Currencies not allowed for this method");
+                throw new ArgumentException("Multiple Currencies not allowed in this method");
             }
 
             var amount = monies.Max(m => m.Amount);
@@ -28,7 +28,7 @@ namespace MoneyCalculator
         {
             if (monies == null || !monies.Any())
             {
-                throw new ArgumentNullException();
+                throw new ArgumentNullException("IEnumerable<IMoney>", "Input money list either null or empty");
             }
 
             List<IMoney> sumPerCurrencyList= new List<IMoney>();
