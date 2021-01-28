@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyCalculator", "MoneyCalculator\MoneyCalculator.csproj", "{84BEB104-1A11-43FD-8D27-2AA87C269DD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyCalculator.Library", "MoneyCalculator\MoneyCalculator.Library.csproj", "{84BEB104-1A11-43FD-8D27-2AA87C269DD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyCalculator.Test", "MoneyCalculator.Test\MoneyCalculator.Test.csproj", "{5D8AF9BA-74E1-4263-A1F9-D9253B6BCCA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyCalculator.Test", "MoneyCalculator.Test\MoneyCalculator.Test.csproj", "{5D8AF9BA-74E1-4263-A1F9-D9253B6BCCA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MoneyCalculator\MoneyCalculator.csproj" />
+    <ProjectReference Include="..\MoneyCalculator\MoneyCalculator.Library.csproj" />
   </ItemGroup>
 
 </Project>
