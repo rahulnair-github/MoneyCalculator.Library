@@ -10,6 +10,7 @@
     <Authors>Rahul Nair</Authors>
     <RepositoryUrl>https://github.com/rahulnair-github/MoneyCalculator.Library</RepositoryUrl>
     <RepositoryType>Private</RepositoryType>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
 </Project>
