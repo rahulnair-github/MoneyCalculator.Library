@@ -1,7 +1,8 @@
+using MoneyCalculatorLibrary;
 using System;
 using Xunit;
 
-namespace MoneyCalculator.Test
+namespace MoneyCalculatorTest
 {
     public class MoneyTest
     {

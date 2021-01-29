@@ -1,10 +1,9 @@
-﻿using MoneyCalculator.Library;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace MoneyCalculator
+namespace MoneyCalculatorLibrary
 {
     public class Money : IMoney
     {

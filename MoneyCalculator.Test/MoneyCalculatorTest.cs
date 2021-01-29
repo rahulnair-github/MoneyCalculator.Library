@@ -1,16 +1,17 @@
-﻿using System;
+﻿using MoneyCalculatorLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace MoneyCalculator.Test
+namespace MoneyCalculatorTest
 {
     public class MoneyCalculatorTest
     {
         [Fact]
         public void MaxMoneyTest()
         {
-            IMoneyCalculator moneyCalculator = new MoneyCalculator();
+            IMoneyCalculator moneyCalculator = new MoneyCalculatorLibrary.MoneyCalculator();
             var monies = GetMoneyList();
             var expected = monies.Max(x => x.Amount);
             var result = moneyCalculator.Max(monies);
@@ -34,7 +35,7 @@ namespace MoneyCalculator.Test
         [Fact]
         public void SumPerCurrencyTest()
         {
-            IMoneyCalculator moneyCalculator = new MoneyCalculator();
+            IMoneyCalculator moneyCalculator = new MoneyCalculator ();
             IEnumerable<IMoney> monies = GetMoneyListWithMultipleCurrencies();
             var actual = moneyCalculator.SumPerCurrency(monies);
             var expected = new List<IMoney> {

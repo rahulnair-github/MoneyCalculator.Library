@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MoneyCalculator
+namespace MoneyCalculatorLibrary
 {
     public class MoneyCalculator : IMoneyCalculator
     {

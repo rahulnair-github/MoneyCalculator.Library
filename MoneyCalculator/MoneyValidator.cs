@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace MoneyCalculator.Library
+namespace MoneyCalculatorLibrary
 {
     internal  class MoneyValidator
     {
@@ -11,12 +10,12 @@ namespace MoneyCalculator.Library
         {
             if (string.IsNullOrEmpty(currencyCode))
             {
-                throw new ArgumentNullException("currencyCode");
+                throw new ArgumentNullException(nameof(currencyCode));
             }
             
             if (!IsValidISOCurrencyCode(currencyCode))
             {
-                throw new ArgumentException($" {currencyCode} is invalid");
+                throw new ArgumentException($" {currencyCode} currency code  is invalid");
             }
 
             return currencyCode;

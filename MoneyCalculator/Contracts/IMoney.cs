@@ -1,4 +1,4 @@
-﻿namespace MoneyCalculator
+﻿namespace MoneyCalculatorLibrary
 {
     /// <summary>
     /// An amount of money in a particular currency.
